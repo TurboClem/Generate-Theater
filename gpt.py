@@ -199,6 +199,7 @@ class GPTLanguageModel(nn.Module):
 model = GPTLanguageModel()
 m = model.to(device)
 # print the number of parameters in the model
+print(f"m.parameters() : {m.parameters()}")
 print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
 
 # create a PyTorch optimizer
